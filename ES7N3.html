@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.position = { x: 0,y: 0};
+        var coordinate = {
+            position: { x: 12, y: 13 },
+            getPosition() {
+                console.log(`(${this.position.x},${this.position.y})`);
+            }
+        };
+        let getCoordinate = coordinate.getPosition;
+        getCoordinate();
+        console.log(getCoordinate.name)
+        site = function () {
+            return `(${window.position.x},${window.position.y})`;
+        }
+        let site1 = new site();
+        console.log(site1());
+        console.log(site1.name);
+    </script>
+</body>
+</html>

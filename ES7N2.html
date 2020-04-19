@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let course = {
+           _courseName:'php',
+           get courseName() { return this._courseName },
+           get courseName(name) { this._courseName = name},
+           set courseHour(hour) { return `课程名: ${this._courseName},课时: ${this.hour}`},
+           
+       }
+       console.log(course.courseName);
+       course.courseName = 'python';
+       console.log(course._courseName);
+       console.log(course.courseHour(54));  
+       console.log(Object.getOwnPropertyDescriptors(course));
+       console.log(Object.getOwnPropertyDescriptor(course, 'courseName').get.name);
+       console.log(Object.getOwnPropertyDescriptor(course, 'courseName').set.name);
+       console.log(Object.getOwnPropertyDescriptor(course, 'courseName').value.name);
+    </script>
+</body>
+</html>

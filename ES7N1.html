@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function fpow(x) {
+          return x ** 3;
+      }
+      function fmain(x,y = fpow(x), ...arr) {
+          console.log(x,y,arr[0],arr[1]);
+      }
+      let args=[20,undefined,40,50,60]
+      fmain(...args);
+    </script>
+</body>
+</html>
